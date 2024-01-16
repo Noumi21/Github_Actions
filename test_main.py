@@ -14,6 +14,6 @@ def test_check_service_response():
     assert libreria_bot.check_service_response("http://scanme.nmap.org/") is not None
 
 def enviar_mensaje():
-    libreria_bot.enviar_mensaje_telegram(TOKEN_TELEGRAM_BOT, id_chat, mensaje)
+    libreria_bot.send_telegram_message(TOKEN_TELEGRAM_BOT, id_chat, mensaje)
 
 enviar_mensaje() # Llama a esta función para enviar el mensaje.
