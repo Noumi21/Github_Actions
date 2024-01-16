@@ -1,0 +1,4 @@
+requests
+pytest
+telegram
+python-telegram-bot
