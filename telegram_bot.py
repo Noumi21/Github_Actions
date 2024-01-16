@@ -9,15 +9,12 @@ async def main():
     api_token = "6960080306:AAEQqlt1I-3g1I_r3d5kCWBjS3qAS59cgbg"
     chat_id = "6527212555"
 
-    while True:
-        if not await check_port_status(url):
-            await send_telegram_message(api_token, chat_id, "El puerto del servicio web no responde o está cerrado.")
-        elif not await check_web_service(url):
-            await send_telegram_message(api_token, chat_id, "El servicio web responde, pero el servicio web está inactivo.")
-        else:
-            await send_telegram_message(api_token, chat_id, "El servicio web responde correctamente")
-
-        await asyncio.sleep(interval)
+    if not await check_port_status(url):
+        await send_telegram_message(api_token, chat_id, "El puerto del servicio web no responde o está cerrado.")
+    elif not await check_web_service(url):
+        await send_telegram_message(api_token, chat_id, "El servicio web responde, pero el servicio web está inactivo.")
+    else:
+        await send_telegram_message(api_token, chat_id, "El servicio web responde correctamente")
 
 if __name__ == "__main__":
     asyncio.run(main())
