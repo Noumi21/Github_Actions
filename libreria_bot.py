@@ -19,7 +19,7 @@ async def check_web_service(url):
         print(f"Error checking web service: {e}")
         return False
 
-async def send_telegram_message(api_token, chat_id, message):
+async def enviar_mensaje_telegram(api_token, chat_id, message):
     bot = Bot(token=api_token)
 
     try:
