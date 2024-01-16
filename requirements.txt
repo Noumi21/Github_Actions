@@ -3,3 +3,4 @@ pytest
 telegram
 python-telegram-bot
 aiogram
+pytest_asyncio
