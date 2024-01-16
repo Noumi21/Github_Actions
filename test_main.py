@@ -11,7 +11,7 @@ def test_check_port_status():
 
 def test_check_service_response():
     # Suponiendo que esta función devuelve True/False
-    assert libreria_bot.check_service_response("http://scanme.nmap.org/") is not None
+    assert libreria_bot.check_web_service("http://scanme.nmap.org/") is not None
 
 def enviar_mensaje():
     libreria_bot.send_telegram_message(TOKEN_TELEGRAM_BOT, id_chat, mensaje)
