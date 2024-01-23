@@ -29,5 +29,5 @@ async def send_telegram_message(api_token, chat_id, message):
         print(f"Error sending Telegram message: {e}")
     finally:
         await bot.session.close()
-
+ 
 # Resto del código...
